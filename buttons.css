@@ -1,0 +1,472 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family:"Bebas Neue";
+    font-size: large;
+    background-repeat: repeat-y;
+
+}
+body{
+    /* background-color:rgba(0, 0, 0, 0.726); */
+    height:1500px;
+    /* background-image: linear-gradient(to left ,rgba(255, 0, 0, 0.589),rgba(0, 0, 255, 0.74)); */
+    /* background-image: radial-gradient(circle at center, red 10%, green 40%, blue 80%); */
+    /* background-image: radial-gradient(ellipse, red 30%, blue 100%); */
+    background-image: linear-gradient(65deg,red,rgb(75, 145, 236) );
+   
+
+}
+
+
+#div1{
+    
+    width: 600px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     display: flex;
+     justify-content:space-between;
+     align-items: center;
+}
+#div1 button{
+    width: 170px;
+    height: 50px;
+}
+#div2{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     display: flex;
+     justify-content:space-between;
+     align-items: center;
+}
+#div2 button{
+    width: 170px;
+    height: 50px;
+}
+#div3{
+    width: 600px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     display: flex;
+     justify-content:space-between;
+     align-items: center;
+}
+#div3 button{
+    width: 170px;
+    height: 50px;
+}
+/* first button style */
+#button1{
+    position: relative;
+    background-color: blueviolet;
+    border: 0px;
+    color: aliceblue;
+    z-index: 1;
+}
+#button1::after{
+    content: "";
+    background-color: rgb(98, 49, 145);
+    position: absolute;
+    bottom:0%;
+    left: 0%;
+    height: 5px;
+    width: 0%;
+    transition: 0.3s;
+    z-index: -1;
+    
+}
+#button1:hover::after{
+    width:100%;
+    /* transform:rotate(180deg); */
+    /* z-index: 1; */;
+    
+}
+#button1:hover{
+    color: orange;
+    transition: 0.3s;
+}
+
+
+/* //second button style  */
+#button2{
+    position: relative;
+    z-index: 1;
+    border: 0px;
+}
+#button2::after{
+    content: "";
+    background-color: orangered;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;   /*intially we need to set the width as 150px*/
+    height: 0px;    /*then we need to set value as 0 so antimation will start from the bottom to top from 0 px of height to 40 px of height */
+    transition:0.3s;
+    z-index: -1;
+}
+#button2:hover::after{
+   /* width: 150px; */
+   height: 100%;  
+   /* here we are increasing height from 0 to 40px */
+}
+/* third button */
+
+#button3{
+    background-color: rgb(255, 0, 0);
+    border: 0px;
+    position: relative;
+    z-index: 1;
+}
+#button3::before{
+    content: "";
+    /* background-color: rgb(171, 231, 235); */
+    background-color:wheat;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    transition: 0.3s;
+    z-index: -1;
+}
+#button3:hover::before{
+    height: 100%;
+}
+#button3:hover{
+    color: rgb(206, 203, 203);
+}
+
+/* fourth button */
+#button4{
+    position: relative;
+    border: 0px;
+    background-color: hotpink;
+    z-index: 1;
+}
+#button4::before{
+    content: "";
+    background-color: rgb(184, 4, 94);
+    position: absolute;
+    top: 0px;
+    right:0px ;
+    width: 0%;
+    height: 50px;
+    transition: 0.3s ease-out;
+    z-index: -1;
+}
+#button4:hover::before{
+    width: 100%;
+}
+#button4:hover{
+    color:whitesmoke ;
+}
+
+/* fifth buttuon */
+#button5{
+    background-color: rgb(16, 77, 190);
+    border: 0px;
+    position: relative;
+    z-index: 1;
+}
+#button5::after{
+    content: "";
+    background-color: cornflowerblue ;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 50px;
+    transition: 0.3s;
+    z-index: -1;
+
+}
+#button5:hover::after{
+    width: 100%;
+}
+#button5:hover{
+    color: white;
+    transition: 0.4s;
+}
+
+/* sixth button */
+#button6{
+    position: relative;
+    z-index: 1;
+    border: 0px;
+}
+#button6::after{
+    content: "";
+    background-color: orangered;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 0%;   /*intially we need to set the width as 150px*/
+    height: 0px;    /*then we need to set value as 0 so antimation will start from the bottom to top from 0 px of height to 40 px of height */
+    transition:0.3s;
+    z-index: -1;
+}
+#button6:hover::after{
+    height: 100%;  
+    width: 100%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+
+#button7 {
+    background-color: #3498db; /* Use your preferred background color */
+    color: #ffffff; /* Text color */
+    border: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+#button7::before,
+#button7::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 121, 46); /* Use your preferred color */
+    width: 0%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#button7::before {
+    left: 50%;
+    top: 0%;
+}
+
+#button7::after {
+    right: 50%;
+    top: 0%;
+}
+#button7:hover::before,
+#button7:hover::after {
+    width: 50%; /* Expand from the center to both sides */
+}
+
+#button8 {
+    background-color: rgb(255, 194, 11); /* Use your preferred background color */
+    color: #ffffff; /* Text color */
+    border: 0;
+    z-index: 1;
+    position: relative;
+}
+
+#button8::before,
+#button8::after {
+    content: "";
+    position: absolute;
+    background-color:black;
+    width: 100%;
+    height: 0%;
+    transition:  0.3s ease-in-out;
+    z-index: -1;
+}
+
+#button8::before {
+    top: 0;
+    left: 0px;
+}
+
+#button8::after {
+    bottom: 0;
+    right: 0;
+}
+
+#button8:hover::before,
+#button8:hover::after {
+    height: 50%; /* Expand from the middle to top and bottom */
+}
+
+
+#button9{
+    background-color:black;
+    position: relative;
+    border: 0px;
+    z-index: 1;
+    color: white;
+}
+#button9::after,#button9::before{
+    content: "";
+    background-color: green;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    z-index: -1;
+    transition: 0.3s ease-in;
+}
+#button9::before{
+    top:50%;
+    left: 0%;
+}
+#button9::after{
+    bottom:50%;
+    left: 0%;
+}
+#button9:hover::before,
+#button9:hover::after{
+    height: 50%;
+}
+
+
+/* second type buttons woth animations */
+#container2{
+    width: 600px;
+    height: 250px;
+    display: flex;
+    background-color:transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    position:relative;
+    top:700px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+#div4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 75px;
+}
+#div4 button{
+    width: 180px;
+    height: 50px;
+}
+#div5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 75px;
+}
+#div5 button{
+    width: 180px;
+    height: 50px;
+}
+
+#button10{
+    border: 0px;
+    background-color: transparent;
+    border:2px solid blueviolet ;
+    letter-spacing: 0.15rem;
+    /* inset: 10px; */
+    transition: 0.3s ease;
+   
+}
+#button10:hover{
+    background-color:transparent;
+    box-shadow: 0px 0px 55px blueviolet;
+    letter-spacing: 0.25rem;
+    color: #3498db;
+    size: 200px;
+   
+}
+:root{
+    --clr:transparent;
+}
+#button11{
+    background-color:green;
+    border: 0px;
+    z-index: 1;
+    position: relative;
+    /* transition: 0.3s ease; */
+}
+#button11::after,#button11::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 5px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+#button11::before{
+    bottom: 0%;
+    right:50%;
+}
+#button11::after{
+    /* top:0%; */
+    bottom: 0%;
+    left:50%;
+}
+#button11:hover::after{
+    width: 50%;
+}
+#button11:hover::before{
+    width: 50%;
+}
+
+
+#button12{
+    background-color:green;
+    border: 0px;
+    z-index: 1;
+    position: relative;
+    /* transition: 0.3s ease; */
+}
+#button12::after,#button12::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 0px;
+    width: 5px;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+#button12::before{
+    bottom: 0%;
+    right:0%;
+}
+#button12::after{
+    bottom: 0%;
+    left:0%;
+}
+#button12:hover::after{
+    height: 100%;
+}
+#button12:hover::before{
+    height: 100%;
+}
+
+#button13{
+    background-color: transparent;
+    border: 2px solid yellow;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.2rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+#button13::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0%;
+    left: -10%;
+    z-index: -1;
+    transform: skewX(20deg);
+    transition: 0.5s ease;
+}
+#button13:hover::after{
+    width: 120%;
+    left: -10%;
+    z-index: -1;
+    
+}
+#button13:hover{
+    letter-spacing: 0.35rem;
+    transition: 0.3s ease-out;
+}
